@@ -1,0 +1,37 @@
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="Thermostat.js"></script>
+<script src="gauge.min.js"></script>
+<script src="thermostat-controller.js"></script>
+</head>
+
+<body id="page-container">
+  <div id="temp">
+  <p id="temp-display"></p>
+  </div>
+
+  <div id="guage-div">
+    <canvas id="gauge" width="300" height="200">
+      This text is displayed if your browser does not support HTML5 Canvas.
+    </canvas>
+  </div>
+
+  <div id="button-style">
+    <button class="increase" id="button">+</button>
+    <button class="decrease" id="button">-</button>
+  </div>
+
+  <div>
+    <button id="reset">Reset Temperature</button>
+  </div>
+
+  <div>
+  <p class="reset-font">Power Save</p>
+  <label class="switch">
+    <input type="checkbox" checked></input>
+    <span class="slider round" ></span>
+  </label>
+  </div>
+
+</body>
