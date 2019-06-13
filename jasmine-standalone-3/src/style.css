@@ -1,6 +1,6 @@
 /* The switch - the box around the slider */
-button {
-  color: red;
+#button-style {
+  text-align: center;
 }
 
 .switch {
@@ -63,4 +63,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#temp {
+  text-align: center;
+  color: green;
+  font-size: 50px;
 }
