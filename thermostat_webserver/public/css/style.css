@@ -115,3 +115,8 @@ input:checked + .slider:before {
   text-decoration: none;
   font-size: 12px;
 }
+
+#weather {
+  text-decoration: none;
+  font-size: 12px;
+}
