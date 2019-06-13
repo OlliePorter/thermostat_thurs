@@ -48,6 +48,7 @@ $(document).ready(function(){
   $("#reset").on('click', function() {
     thermostat.resetTemperature();
     $('#temp-display').text(thermostat.temperature());
+    gauge.set(thermostat.temperature());
   });
 
 
