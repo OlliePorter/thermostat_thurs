@@ -1,6 +1,10 @@
 function Thermostat() {
-  this._temperature = 20;
+  this._defaultTemp = 20;
+  this._temperature = this._defaultTemp;
   this._powerSaving = true;
+  this._minimumTemp = 10;
+  this._maximumLpTemp = 25;
+  this._maximumHpTemp = 32;
 };
 
 Thermostat.prototype.temperature = function() {
@@ -9,13 +13,13 @@ Thermostat.prototype.temperature = function() {
 
 Thermostat.prototype.upTemperature = function() {
   if(this._powerSaving) {
-    if(this._temperature >= 25) {
+    if(this._temperature >= this._maximumLpTemp) {
       throw new Error("Think of the polar bears")
     } else {
       this._temperature += 1;
     };
   } else {
-    if (this._temperature >= 32) {
+    if (this._temperature >= this._maximumHpTemp) {
       throw new Error("Think of the orphans")
     } else {
       this._temperature += 1;
@@ -25,7 +29,7 @@ Thermostat.prototype.upTemperature = function() {
 };
 
 Thermostat.prototype.downTemperature = function() {
-  if (this._temperature <= 10){
+  if (this._temperature <= this._minimumTemp){
     throw new Error("Think of the chafing");
   } else {
   this._temperature -= 1;};
@@ -36,7 +40,7 @@ Thermostat.prototype.switchPowerSaving= function() {
 };
 
 Thermostat.prototype.resetTemperature= function() {
-  this._temperature = 20;
+  this._temperature = this._defaultTemp;
 };
 
 Thermostat.prototype.checkEnergyUsage = function() {
