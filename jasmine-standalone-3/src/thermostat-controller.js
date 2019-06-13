@@ -1,6 +1,7 @@
+var thermostat = new Thermostat();
 $(document).ready(function(){
 
-  var thermostat = new Thermostat();
+
   $('#temp-display').text(thermostat.temperature());
 
   $(".increase").on('click', function(){
@@ -13,7 +14,7 @@ $(document).ready(function(){
     $('#temp-display').text(thermostat.temperature());
   });
 
-  $(".toggle").on('click', function() {
+  $("body > div > label > input[type=checkbox]").on('click', function() {
     thermostat.switchPowerSaving();
   })
 
