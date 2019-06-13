@@ -51,11 +51,12 @@ $(document).ready(function(){
     gauge.set(thermostat.temperature());
   });
 
-  $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=c1eb59d423c260388ba9b4cbc0a7feb2", function(weatherResponse) {
-   $('#weather').text("Temperature outside:" + Math.round(weatherResponse.main.temp - 273.15) + " degrees");
    var iconcode = weatherResponse.weather[0].icon;
+   $('#weather').text("Temperature outside:" + Math.round(weatherResponse.main.temp - 273.15) + " degrees");
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=c1eb59d423c260388ba9b4cbc0a7feb2", function(weatherResponse) {
    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
    $('#weather-icon').attr('src', iconurl);
   })
+
 
 });
