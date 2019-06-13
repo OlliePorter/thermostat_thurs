@@ -1,6 +1,22 @@
 /* The switch - the box around the slider */
 #button-style {
-  text-align: center;
+}
+
+#reset {
+  margin: 60px;
+  border-radius: 20%;
+}
+
+#button {
+ background-color: #4CAF50; /* Green */
+ border: none;
+ border-radius: 50%;
+ color: white;
+ padding: 10px 15px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
 }
 
 .switch {
@@ -43,7 +59,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #6FADCF;
 }
 
 input:focus + .slider {
@@ -66,7 +82,16 @@ input:checked + .slider:before {
 }
 
 #temp {
-  text-align: center;
-  color: green;
+  color: #6FADCF;
   font-size: 50px;
+}
+
+#page-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#guage-div {
+  margin: -30px;
 }

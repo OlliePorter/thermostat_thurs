@@ -6,25 +6,32 @@
 <script src="thermostat-controller.js"></script>
 </head>
 
-<div id="temp">
-<p id="temp-display"></p>
-</div>
+<body id="page-container">
+  <div id="temp">
+  <p id="temp-display"></p>
+  </div>
 
-<div id="button-style">
-  <button class="increase">+</button>
-  <button class="decrease">-</button>
-</div>
+  <div id="guage-div">
+    <canvas id="gauge" width="300" height="200">
+      This text is displayed if your browser does not support HTML5 Canvas.
+    </canvas>
+  </div>
 
-<canvas id="gauge" width="300" height="200">
-  This text is displayed if your browser does not support HTML5 Canvas.
-</canvas>
+  <div id="button-style">
+    <button class="increase" id="button">+</button>
+    <button class="decrease" id="button">-</button>
+  </div>
 
-<div>
-  Powersave
-<label class="switch">
-  <input type="checkbox" checked></input>
-  <span class="slider round" ></span>
-</label>
-</div>
+  <div>
+    <button id="reset">Reset temperature</button>
+  </div>
 
-<button id="reset">Reset temperature</button>
+  <div>
+    Powersave
+  <label class="switch">
+    <input type="checkbox" checked></input>
+    <span class="slider round" ></span>
+  </label>
+  </div>
+
+</body>

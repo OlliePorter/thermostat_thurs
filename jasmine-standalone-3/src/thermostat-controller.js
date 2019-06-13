@@ -29,7 +29,7 @@ $(document).ready(function(){
 
   $('#temp-display').text(thermostat.temperature());
 
-  $(".increase").on('click', function(){
+  $("#button.increase").on('click', function(){
     thermostat.upTemperature();
     $('#temp-display').text(thermostat.temperature());
     gauge.set(thermostat.temperature());
@@ -52,5 +52,3 @@ $(document).ready(function(){
 
 
 });
-
-
