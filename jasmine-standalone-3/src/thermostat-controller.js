@@ -14,7 +14,7 @@ $(document).ready(function(){
     $('#temp-display').text(thermostat.temperature());
   });
 
-  $(".toggle").on('click', function() {
+  $("body > div > label > input[type=checkbox]").on('click', function() {
     thermostat.switchPowerSaving();
   })
 
