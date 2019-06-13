@@ -78,4 +78,14 @@ describe("Thermostat", function() {
     expect(result).toEqual("high-usage");
   });
 
+  it("should actually bloody reset when the reset is called", function() {
+    thermostat = new Thermostat();
+    for(i = 0; i < 5; i++) {
+      thermostat.upTemperature();
+    }
+    thermostat.resetTemperature();
+    result = thermostat.temperature();
+    expect(result).toEqual(20);
+  });
+
 });

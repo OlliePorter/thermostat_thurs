@@ -18,4 +18,10 @@ $(document).ready(function(){
     thermostat.switchPowerSaving();
   })
 
+  $("#reset").on('click', function() {
+    thermostat.resetTemperature();
+    $('#temp-display').text(thermostat.temperature());
+  });
+
+
 });
